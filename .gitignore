@@ -1,0 +1,14 @@
+# PHP standard ignores
+/tmp/*
+/vendor/
+/composer.lock
+/composer.phar
+/build/
+/cache/
+.idea/
+.vscode/
+.env
+.env.local
+
+# YOUR CRUCIAL SECURITY LINE: DO NOT UPLOAD DATABASE CREDENTIALS
+db_config.php

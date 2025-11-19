@@ -1,0 +1,159 @@
+/* Fix scrolling issues - override home.css restrictions */
+body {
+    overflow-x: hidden !important; /* This prevents horizontal scrolling */
+     overflow-y: auto !important;  /* This allows vertical scrolling */
+    height: auto !important;
+     min-height: 100vh;
+}
+.room-area-wrapper {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    align-items: flex-start !important;
+    padding: 20px 0;
+}
+
+.storybooks-container {
+    overflow: visible !important;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.storybooks-header {
+  width: 100%;
+  text-align: center;
+  color: #1C2C4C;
+  padding-top: 30px;
+}
+
+.storybooks-header .header-content {
+  display: flex;
+  flex-direction: column; /* force vertical alignment */
+  align-items: center;
+  justify-content: center;
+  margin-right: 128px;
+}
+
+/* Update 1: Main page title and subtitle visibility */
+.storybooks-header h1 {
+  font-size: 36px;
+  margin: 0;
+  /* Added shadow specifically to make it stand out from the wall background */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6), 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.storybooks-header p {
+  font-size: 18px;
+  margin-top: 10px;
+  /* Added shadow for the small description under the main title */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  font-weight: 600; /* Optional: makes it slightly thicker */
+}
+
+
+
+.storybooks-main {
+    overflow: visible !important;
+    padding: 20px;
+}
+
+/* Page-specific styles for help section */
+.help-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Update 2: Subheadings inside the cards (YOUR MAIN REQUEST) */
+.help-title {
+  margin-bottom: 6px;
+  color: #6a4c93;
+  /* Added a subtle dark shadow to lift the purple text off the card */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.help-list {
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.help-grid {
+    display: grid;
+    gap: 16px;
+}
+
+/* Quick Start Guide Styles */
+.help-quick-start {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.help-quick-start-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #6a4c93;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.help-intro {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.help-quick-list {
+    margin-top: 10px;
+}
+
+.help-quick-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.help-quick-list strong {
+    color: #6a4c93;
+    font-weight: 700;
+}
+
+.tunetown-card {
+    justify-self: center;
+    max-width: 520px;
+    width: 100%;
+    grid-column: 1 / -1; /* span full row to center in two-column layout */
+}
+
+.help-back-button {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.help-back-button a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (min-width: 720px) {
+    .help-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .help-quick-start-card {
+        max-width: 450px;
+    }
+}
+
+/* Ensure all cards have consistent alignment */
+.help-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+

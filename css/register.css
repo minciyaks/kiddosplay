@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('../images/hero2.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+ 
+/* NEW: Style for the Back Button (Top-Left Positioned Circle) */
+.back-button {
+  position: absolute; /* Position relative to .login-wrapper */
+  top: 8px; /* Moves it 20px up */
+  left: 6px; /* Moves it 20px left */
+  width: 45px;
+  height: 45px;
+  background-color: #00796B; /* Your primary green color */
+  color: white; /* White arrow */
+  text-decoration: none;
+  border-radius: 50%; /* Makes it circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex; /* To center the arrow character */
+  justify-content: center;
+  align-items: center;
+  font-size: 38px; /* Large arrow character */
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 10; /* Ensure it stays above the login box */
+}
+
+.back-button:hover {
+  background-color: #004D40; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+h2 {
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+  color: #00796B;
+}
+
+label {
+  color: #1C2C4C;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* 👁️ Eye icon toggle styles */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.password-wrapper img {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.password-wrapper img:hover {
+  opacity: 1;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #00796B;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004D40;
+}

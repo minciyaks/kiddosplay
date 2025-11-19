@@ -1,0 +1,299 @@
+/* Children's Stories Page Styles */
+:root {
+    --color-sunlight-yellow: #FFD700;
+    --color-soft-aqua-blue: #81D4FA;
+    --color-muted-coral-orange: #FFAB91;
+    --color-deep-forest-green: #2E7D32;
+    --color-vibrant-crimson-red: #E53935;
+    --color-soft-lilac: #9C27B0;
+    --color-neutral-cream: #FFFDE7;
+    --color-warm-grey-taupe: #795548;
+    --color-darker-grey-brown: #5D4037;
+    --color-soft-sandy-brown: #D3BC9A;
+    --color-text-on-dark: #F8F8F8;
+    --color-text-on-light: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #a8c8ec 0%, #d4a5c7 100%);
+    min-height: 100vh;
+    color: var(--color-text-on-light);
+}
+
+.storybooks-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.storybooks-header {
+    background: linear-gradient(45deg, #f8bbd9, #e1bee7);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.back-button .back-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: var(--color-deep-forest-green);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button .back-link:hover {
+    background: #388e3c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content h1 {
+    color: #6a4c93;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.header-content p {
+    color: #5a4a7a;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+/* Style for the entire clock item (The 'nav-item' on the right) */
+.clock-item {
+    /* Increase the base size for both icon and text */
+    font-size: 1.4em; /* Increased from default */
+    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white; /* Ensure visibility */
+    white-space: nowrap; 
+    
+    /* Ensure the padding/margin is similar to the back button for vertical alignment */
+    padding: 10px; 
+}
+
+/* Your original style for the clock icon, adjusted for size */
+.nav-item .fa-clock {
+    /* Set a larger size specifically for the icon */
+    font-size: 1.2em; /* Makes the icon slightly bigger than the surrounding text */
+    margin-right: 8px; 
+}
+
+/* Your original style for the time display, adjusted for size */
+#time-display {
+    /* Use the inherited font-size (1.4em) but ensure bold white */
+    font-weight: bold;
+    color: white;
+}
+
+/* Main Content */
+.storybooks-main {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Story Card - Playing Card Design */
+.story-card {
+    background: var(--color-neutral-cream);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+    aspect-ratio: 3/4;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.story-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border-color: var(--color-sunlight-yellow);
+}
+
+.story-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.story-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover img {
+    transform: scale(1.05);
+}
+
+.story-card p {
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-text-on-light);
+    margin: 0;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 0 0 12px 12px;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animations */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .storybooks-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-content h1 {
+        font-size: 2em;
+    }
+    
+    .storybooks-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .storybook-card {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .storybooks-main {
+        padding: 20px 10px;
+    }
+    
+    .storybooks-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .story-title {
+        font-size: 1.2em;
+    }
+    
+    .read-story-btn {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+}
+
+/* Loading Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Special Effects */
+.storybook-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.storybook-card:hover::before {
+    transform: translateX(100%);
+}
+
+
+#lock-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none; /* Starts hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it's on top of everything */
+}
+
+.lock-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}

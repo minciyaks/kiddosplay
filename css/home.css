@@ -1,0 +1,526 @@
+/* Color Palette Variables */
+:root {
+    --color-sunlight-yellow: #FFD700;
+    --color-soft-aqua-blue: #81D4FA;
+    --color-muted-coral-orange: #FFAB91;
+    --color-deep-forest-green: #2E7D32;
+    --color-vibrant-crimson-red: #E53935;
+    --color-soft-lilac: #9C27B0;
+    --color-neutral-cream: #FFFDE7;
+    --color-warm-grey-taupe: #795548; /* Header background */
+    --color-darker-grey-brown: #5D4037; /* Login button background */
+    --color-soft-sandy-brown: #D3BC9A;
+    --color-dark-border-highlight: #4a4a4a;
+    --color-text-on-dark: #F8F8F8;
+    --color-text-on-light: #444;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-neutral-cream);
+    overflow: hidden; 
+
+    /* CORRECTED PATH and FILENAME */
+    /* Just the filename is needed because it's in the same folder as index.html */
+    background-image: url('../images/bg_image.png'); 
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* --- Header Styling --- */
+.main-header {
+    background-color: var(--color-warm-grey-taupe);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    padding-left: 163px;
+}
+
+.logo {
+    position: absolute;
+    top: -50px; 
+    left: 20px;
+    z-index: 11;
+}
+
+.logo img {
+    height: 135px;
+    padding: 2px;
+    border-radius: 5px;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: static;
+    transform: none;
+    height: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin: 0 25px;
+}
+
+.main-nav .nav-item {
+    text-decoration: none;
+    color: var(--color-text-on-dark);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: var(--color-warm-grey-taupe);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.main-nav .nav-item:hover {
+    background-color: var(--color-deep-forest-green);
+    border-color: var(--color-sunlight-yellow);
+}
+
+.main-nav .nav-item[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 11;
+}
+
+.main-nav .nav-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-nav .nav-item i {
+    font-size: 1.2em;
+}
+.nav-item .fa-clock {
+  margin-right: 8px;
+}
+
+#time-display {
+  font-size: 1em; /* Adjust size to match other nav text */
+  font-weight: bold;
+  color: var(--color-text-on-dark);
+  margin-left: 8px; /* Space between clock icon and text */
+}
+
+.parent-dashboard-btn { background-color: var(--color-vibrant-crimson-red); }
+.parent-dashboard-btn:hover { background-color: #c2185b; }
+.how-to-use-btn { background-color: var(--color-deep-forest-green); }
+.how-to-use-btn:hover { background-color: #388e3c; }
+.parenting-btn { background-color: var(--color-soft-lilac); }
+.parenting-btn:hover { background-color: #7b1fa2; }
+
+/* --- Login/Avatar Area --- */
+.login-avatar-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.login-avatar-btn {
+    background-color: var(--color-darker-grey-brown);
+    color: var(--color-text-on-dark);
+    border: none;
+    border-radius: 25px;
+    padding: 5px 15px 5px 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.login-avatar-btn:hover {
+    background-color: var(--color-deep-forest-green);
+}
+
+.avatar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid var(--color-sunlight-yellow);
+    object-fit: cover;
+}
+
+.login-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-neutral-cream);
+    border: 1px solid var(--color-warm-grey-taupe);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    z-index: 20;
+    padding: 10px 0;
+}
+
+.login-dropdown.visible {
+    display: flex;
+}
+
+.login-dropdown a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--color-warm-grey-taupe);
+    font-size: 0.9em;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.login-dropdown a:hover {
+    background-color: var(--color-soft-aqua-blue);
+    color: white;
+}
+
+/* --- Room Area Wrapper --- */
+.room-area-wrapper {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1560px;
+    max-height: 800px;
+    aspect-ratio: 1.7 / 1;
+    overflow: hidden;
+    background-color: rgba(255, 253, 231, 0.05);
+}
+
+/* Hotspots */
+.hotspot { position: absolute; cursor: pointer; z-index: 2; border-radius: 25%; animation: pulse-glow 2.5s infinite; transition: transform 0.2s ease; }
+.bookshelf { top: 1%; left: 72%; width: 20%; height: 73%; }
+.computer { top: 32%; left: 36%; width: 15%; height: 20%; }
+.radio    { top: 45%; left: 14%; width: 11%; height: 14%; }
+.whiteboard { top: 32%; left: 52%; width: 19%; height: 42%; }
+.toybox   { top: 67%; left: -4%; width: 29%; height: 31%; }
+
+.hotspot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(135, 206, 250, 0.6);
+  border-radius: 25%;
+  animation: pulse-overlay 2.5s infinite;
+  z-index: 1;
+}
+
+.hotspot:hover {
+  animation-play-state: paused;
+  box-shadow: 0 0 15px 10px rgba(255, 215, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.hotspot:hover::after {
+  animation-play-state: paused;
+  background-color: rgba(255, 215, 0, 0.7);
+}
+
+/* --- Sound Button --- */
+.room-positioned-sound-btn {
+    position: absolute;
+    top: 70%;
+    right: 7%;
+    background-color: var(--color-deep-forest-green);
+    color: var(--color-text-on-dark);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 3;
+}
+
+.room-positioned-sound-btn:hover {
+    transform: scale(1.1);
+    background-color: #388e3c;
+}
+
+.room-positioned-sound-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 11;
+}
+
+.room-positioned-sound-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Character Guide / Message Modal --- */
+.character-modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+}
+
+.character-modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Character container */
+.character-display {
+    display: flex;
+    align-items: flex-end;
+    margin-right: -20px;
+}
+
+.character-portrait {
+    max-height: 300px;
+    width: auto;
+   
+    object-fit: contain;
+}
+
+/* Message box */
+.character-modal-content {
+    background: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    padding: 0;
+    box-shadow: none;
+    position: relative;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.character-modal-overlay.visible .character-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.message-area {
+    background-color: rgba(168, 216, 240, 0.9); /* Slight transparency for readability */
+    color: #1F1F1F;
+    border: 4px solid #5A3E2B;
+    border-radius: 15px;
+    padding: 20px 25px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.message-area p {
+    font-size: 1.2em;
+    color: #1F1F1F;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+}
+
+.modal-buttons {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    margin-left: 10px;
+    padding: 12px 25px;
+    background: var(--color-deep-forest-green);
+    color: var(--color-text-on-dark);
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.modal-buttons button:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+}
+
+#modalCloseButton {
+    background: var(--color-vibrant-crimson-red);
+}
+
+#modalCloseButton:hover {
+    background-color: #d32f2f;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .character-modal-overlay { align-items: center; padding: 10px; }
+    .character-modal-content { flex-direction: column; width: 100%; max-width: 100%; }
+    .character-display { margin-right: 0; margin-bottom: 10px; justify-content: center; }
+    .character-portrait { max-height: 180px; }
+    .message-area { width: 100%; padding: 15px; font-size: 1rem; }
+}
+
+/* --- Pulse Animations --- */
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(255, 215, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+}
+
+@keyframes pulse-overlay {
+  0% { transform: scale(0.9); opacity: 0.5; }
+  70% { transform: scale(1.2); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+/* --- Start Screen --- */
+.start-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.start-button {
+    padding: 20px 40px;
+    font-size: 2em;
+    color: white;
+    background-color: var(--color-deep-forest-green);
+    border: 3px solid var(--color-sunlight-yellow);
+    border-radius: 15px;
+    cursor: pointer;
+    animation: pulse-glow 2s infinite;
+}
+
+.start-button:hover {
+    background-color: #388e3c;
+}
+
+/* Hide the sound button on the start screen */
+#soundToggleBtn {
+    display: none;
+}
+
+/* --- Improved Login Dropdown --- */
+
+/* Style for each link in the dropdown */
+.login-dropdown a {
+ display: flex;
+ align-items: center; /* Vertically aligns icon and text */
+ padding: 8px 15px; /* Increased padding for more space */
+ text-decoration: none;
+ color: var(--color-warm-grey-taupe);
+font-size: 1em; /* Slightly larger font */
+ white-space: nowrap;
+ transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 6px; /* Slightly rounded corners on hover */
+    margin: 4px; /* Space between links */
+}
+
+/* Change colors on hover */
+.login-dropdown a:hover {
+ background-color: var(--color-vibrant-crimson-red);
+ color: white;
+}
+
+/* Style for the icon */
+.login-dropdown a i {
+ margin-right: 8px; /* Adds space between the icon and the text */
+ width: 15px; /* Ensures consistent alignment */
+    text-align: center;
+}
