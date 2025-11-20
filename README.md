@@ -1,5 +1,7 @@
 # 🤖 KiddosPlay - Early Childhood Learning Hub
 
+### 🌐 LIVE DEMO: [kiddosplay.infinityfreeapp.com](http://kiddosplay.infinityfreeapp.com/)
+
 **Mini Project for [BCA/Semester 5]**
 
 ## 🌟 Project Overview
