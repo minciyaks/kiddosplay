@@ -75,3 +75,22 @@ To run this project locally using **XAMPP** or a similar stack:
 4.  **Run:** Navigate to the project's entry point (`http://localhost/kiddosplay/index.html`).
 
     **Note:** To test a working user account, you must manually set a registered user's status to 'approved' in the MySQL database.
+
+
+## 👤 Authors / Project Team
+
+This project was developed by the following students :
+
+* [Minciya K S] - [23UBC02]
+* [Akhilesh K Asokan ] - [Student ID 1]
+* [Sreema Manoj] - [ Student ID 2]
+
+* **My Role in Project:** **Lead Backend Developer, Authentication/Database Architect, and Frontend UI Lead**
+
+## 🙏 Acknowledgements
+
+* **Font Awesome:** Used for all icons in the web application.
+
+
+  
+
