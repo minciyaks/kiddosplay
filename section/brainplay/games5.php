@@ -117,7 +117,7 @@ if (isset($_SESSION['user_id'])) {
         <span id="time-display">00:00</span>
       </div>
     </div>
-    <div class="title">Brian Play</div>
+    <div class="title">Brain Play</div>
   </header>
 
   <div class="quiz-container hidden">
