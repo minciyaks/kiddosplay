@@ -83,15 +83,18 @@ To run this project locally using **XAMPP** or a similar stack:
 
 This project was developed by the following students :
 
-* [Minciya K S] - [23UBC02]
-* [Akhilesh K Asokan ] - [Student ID 1]
-* [Sreema Manoj] - [ Student ID 2]
+* Minciya K S
+* Akhilesh K Asokan 
+* Sreema Manoj 
 
-* **My Role in Project:** **Lead Backend Developer, Authentication/Database Architect, and Frontend UI Lead**
 
 ## 🙏 Acknowledgements
 
 * **Font Awesome:** Used for all icons in the web application.
+
+## Authorship
+This repository contains original work developed collaboratively as part of a college mini project.
+Unauthorized removal of contributor attribution violates the project license.
 
 
   
