@@ -2,6 +2,23 @@
 
 ### 🌐 LIVE DEMO: [kiddosplay.infinityfreeapp.com](http://kiddosplay.infinityfreeapp.com/)
 
+## Demo Login (Evaluation Only)
+
+The application is customized based on the child’s age selected during registration.
+To explore each age-specific interface, use the following demo accounts:
+
+- Age 2–3  
+  Username: Demo_23  
+  Password: Demo123
+
+- Age 4  
+  Username: Demo_4  
+  Password: Demo123
+
+- Age 5  
+  Username: Demo_5  
+  Password: Demo123
+  
 **Mini Project for [BCA/Semester 5]**
 
 ## 🌟 Project Overview
