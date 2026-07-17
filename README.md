@@ -1,6 +1,12 @@
 # 🤖 KiddosPlay - Early Childhood Learning Hub
 
+> **BCA Semester 5 Mini Project**
+
 ### 🌐 LIVE DEMO: [kiddosplay.infinityfreeapp.com](http://kiddosplay.infinityfreeapp.com/)
+
+## Compatibility
+
+> **This project is optimized for laptop and desktop devices.**
 
 ## Demo Login (Evaluation Only)
 
@@ -83,7 +89,7 @@ To run this project locally using **XAMPP** or a similar stack:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/minciyaks/kiddosplay.git](https://github.com/minciyaks/kiddosplay.git)
+    git clone https://github.com/minciyaks/kiddosplay.git
     ```
 2.  **Database Setup:**
     * Create a new MySQL database named `kiddosplay`.
@@ -109,10 +115,13 @@ This project was developed by the following students :
 
 * **Font Awesome:** Used for all icons in the web application.
 
-## Authorship
-This repository contains original work developed collaboratively as part of a college mini project.
-Unauthorized removal of contributor attribution violates the project license.
+## 👥 Authorship
 
+This repository contains the original work developed collaboratively by the listed contributors as part of a BCA Semester 5 mini project.
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
 
   
 
